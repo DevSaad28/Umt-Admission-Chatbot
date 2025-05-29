@@ -9,8 +9,8 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     // Check both localStorage and sessionStorage for stored user
-    const localStoredUser = localStorage.getItem("User_Chat_App_Token")
-    const sessionStoredUser = sessionStorage.getItem("User_Chat_App_Token")
+    const localStoredUser = localStorage.getItem("User_Chat_Bot_Token")
+    const sessionStoredUser = sessionStorage.getItem("User_Chat_Bot_Token")
 
     if (localStoredUser) {
       setUser(JSON.parse(localStoredUser))
@@ -28,14 +28,14 @@ export const AuthProvider = ({ children }) => {
 
     if (remember) {
       // Store in localStorage for persistent login
-      localStorage.setItem("User_Chat_App_Token", JSON.stringify(userData))
+      localStorage.setItem("User_Chat_Bot_Token", JSON.stringify(userData))
       // Clear sessionStorage if it exists
-      sessionStorage.removeItem("User_Chat_App_Token")
+      sessionStorage.removeItem("User_Chat_Bot_Token")
     } else {
       // Store in sessionStorage for session-only login
-      sessionStorage.setItem("User_Chat_App_Token", JSON.stringify(userData))
+      sessionStorage.setItem("User_Chat_Bot_Token", JSON.stringify(userData))
       // Clear localStorage if it exists
-      localStorage.removeItem("User_Chat_App_Token")
+      localStorage.removeItem("User_Chat_Bot_Token")
     }
 
     setUser(userData)
@@ -43,8 +43,8 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     // Clear from both storages to ensure complete logout
-    localStorage.removeItem("User_Chat_App_Token")
-    sessionStorage.removeItem("User_Chat_App_Token")
+    localStorage.removeItem("User_Chat_Bot_Token")
+    sessionStorage.removeItem("User_Chat_Bot_Token")
     setUser(null)
     setRememberMe(false)
   }
@@ -57,17 +57,17 @@ export const AuthProvider = ({ children }) => {
     if (user) {
       if (newRememberMe) {
         // Move from sessionStorage to localStorage
-        const userData = sessionStorage.getItem("User_Chat_App_Token")
+        const userData = sessionStorage.getItem("User_Chat_Bot_Token")
         if (userData) {
-          localStorage.setItem("User_Chat_App_Token", userData)
-          sessionStorage.removeItem("User_Chat_App_Token")
+          localStorage.setItem("User_Chat_Bot_Token", userData)
+          sessionStorage.removeItem("User_Chat_Bot_Token")
         }
       } else {
         // Move from localStorage to sessionStorage
-        const userData = localStorage.getItem("User_Chat_App_Token")
+        const userData = localStorage.getItem("User_Chat_Bot_Token")
         if (userData) {
-          sessionStorage.setItem("User_Chat_App_Token", userData)
-          localStorage.removeItem("User_Chat_App_Token")
+          sessionStorage.setItem("User_Chat_Bot_Token", userData)
+          localStorage.removeItem("User_Chat_Bot_Token")
         }
       }
     }

@@ -1,8 +1,7 @@
-import Authentication from "../Pages/Authentication";
-import Chat from "../Pages/Chat";
+import Login from "../Pages/User/Login.Page";
+import ChatBot from "../Pages/User/ChatBot.Page";
 import AuthLayout from "../Layout/Auth/Auth.Layout";
 import UserLayout from "../Layout/User/User.Layout";
-import ChatBot from "../Pages/User/ChatBot.Page";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { PrivateRoute, PublicRoute } from "./ProtectedRoutes";
 
@@ -15,7 +14,7 @@ const router = createBrowserRouter([
         path: "",
         element: (
           <PublicRoute>
-            <Authentication />
+            <Login />
           </PublicRoute>
         ),
       },

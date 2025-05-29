@@ -1,6 +1,5 @@
-"use client"
 import { Outlet } from "react-router-dom"
-import Navbar from "../../Components/Navbar/navbar"
+import NavBar from "../../Components/User/Navbar/Navbar.component"
 import { useToast } from "../../Components/Toast/toast"
 
 const Main = () => {
@@ -11,7 +10,7 @@ const Main = () => {
       {/* Render the ToastList at the top level */}
       <ToastList />
 
-      <Navbar />
+      <NavBar />
       <Outlet />
     </>
   )

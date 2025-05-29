@@ -1,8 +1,7 @@
-import React from "react";
-import ChatBot from "../../Components/User/ChatBot/ChatBot.component";
+import ChatBotComponent from "../../Components/User/ChatBot/ChatBot.component";
 
 const ChatBot = () => {
-  return <ChatBot />;
+  return <ChatBotComponent />;
 };
 
 export default ChatBot;
