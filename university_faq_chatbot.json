@@ -1,0 +1,622 @@
+{
+  "faqs": [
+    {
+      "category": "General",
+      "original_question": "Hi",
+      "answer": "Hello, How may I help you?",
+      "possible_questions": [
+        "Hello, are you there?",
+        "Hey there, can you help me?",
+        "Hi, I need some assistance.",
+        "Greetings, how can you help me?"
+      ]
+    },
+    {
+      "category": "General",
+      "original_question": "Hello",
+      "answer": "Hello, How may I help you?",
+      "possible_questions": [
+        "Hi, what's up?",
+        "Hello there, how may I get help?",
+        "Hey, can you assist me?",
+        "Greetings, I need support."
+      ]
+    },
+    {
+      "category": "General",
+      "original_question": "Can you give me some information regarding Admission",
+      "answer": "Sure, Ask whatever you want to know about Admissions!",
+      "possible_questions": [
+        "I need details about the admission process.",
+        "What do I need to know about applying for admission?",
+        "Could you provide information regarding admissions?",
+        "Tell me about the admission requirements."
+      ]
+    },
+    {
+      "category": "Academic",
+      "original_question": "Is there any handbook/guidelines for students?",
+      "answer": "Yes! Check the Participant’s Handbook here: https://www.umt.edu.pk/org/Academics-and-Academic-Affairs/Participant-Handbook.aspx",
+      "possible_questions": [
+        "Where can I find the student handbook?",
+        "Do you have guidelines for students?",
+        "How can I access the participant’s handbook?",
+        "Is there a handbook for student rules and regulations?"
+      ]
+    },
+    {
+      "category": "Academic",
+      "original_question": "Where can I collect the academic calendar?",
+      "answer": "It can be downloaded from the UMT Office of Registrar website: https://www.umt.edu.pk/org/home.aspx",
+      "possible_questions": [
+        "How do I access the academic calendar?",
+        "Where is the academic calendar available?",
+        "Can I download the academic calendar online?",
+        "Where can I find the current academic calendar?"
+      ]
+    },
+    {
+      "category": "Academic",
+      "original_question": "What is GPA and how is it computed?",
+      "answer": "GPA represents a participant’s performance in a semester. It is calculated by converting letter grades to grade points, multiplying these by the credit hours for each course, and dividing the total grade points by the total credit hours. GPA ranges from 0 to 4.00.",
+      "possible_questions": [
+        "Can you explain what GPA means and how to calculate it?",
+        "How do I compute my GPA?",
+        "what is GPA",
+        "What does GPA stand for and how is it determined?",
+        "How is the grade point average calculated?"
+      ]
+    },
+    {
+      "category": "Academic",
+      "original_question": "What is CGPA and how is it computed?",
+      "answer": "CGPA (Cumulative Grade Point Average) is calculated by multiplying the credit hours of each subject by the grade points achieved, summing these values for all semesters, and then dividing by the total credit hours registered over all semesters.",
+      "possible_questions": [
+        "How is CGPA calculated?",
+        "What is CGPA",
+        "Can you explain how to compute CGPA?",
+        "What does CGPA mean and how do I calculate it?",
+        "What is the method for determining my cumulative GPA?"
+      ]
+    },
+    {
+      "category": "Academic",
+      "original_question": "How can I check my SGPA/CGPA?",
+      "answer": "You can check your SGPA/CGPA via the Student Portal at https://online.umt.edu.pk using your login credentials.",
+      "possible_questions": [
+        "Where do I view my SGPA or CGPA?",
+        "How do I check my grade averages?",
+        "Can I access my academic scores online?",
+        "How do I log in to check my SGPA/CGPA?"
+      ]
+    },
+    {
+      "category": "Academic",
+      "original_question": "What is the required CGPA for my degree?",
+      "answer": "For the bachelor’s program it is 2.00, for the master's program it is 2.50, and for the doctoral program, it is 3.00. Please refer to the Participant’s Handbook for more details.",
+      "possible_questions": [
+        "What CGPA do I need for my degree?",
+        "Could you tell me the minimum CGPA required for different programs?",
+        "What is the CGPA requirement for undergraduate, master’s, and doctoral degrees?",
+        "How much CGPA is needed to complete my degree?"
+      ]
+    },
+    {
+      "category": "Academic",
+      "original_question": "What is the Attendance Policy?",
+      "answer": "A minimum of 75% attendance is required to be eligible for final exams. Participants with less than 75% attendance receive an ‘SA’ (Short Attendance) grade and must repeat the course.",
+      "possible_questions": [
+        "What attendance percentage is needed for final exams?",
+        "Can you explain the attendance requirements?",
+        "How much attendance is mandatory to sit for exams?",
+        "What is the policy on attendance for exam eligibility?"
+      ]
+    },
+    {
+      "category": "Academic",
+      "original_question": "Are Mid-Term and End-Term Examinations Mandatory?",
+      "answer": "Yes, both mid-term and end-term examinations are mandatory for undergraduate and graduate programs.",
+      "possible_questions": [
+        "Do I have to take both mid-term and final exams?",
+        "Are all scheduled examinations compulsory?",
+        "Is it required to sit for both mid-term and end-term exams?",
+        "Must I attend both types of exams in my program?"
+      ]
+    },
+    {
+      "category": "Academic",
+      "original_question": "What is the passing percentage for a course?",
+      "answer": "For Bachelor’s/Master’s (16 years of education) programs, a minimum of 50% is required. For Postgraduate (18 years of education) programs, a minimum of 60% is required. Accredited programs (e.g., engineering, medical) follow the rules set by the respective regulatory bodies.",
+      "possible_questions": [
+        "What is the minimum passing mark for a course?",
+        "How many marks do I need to pass a course?",
+        "What percentage is required to pass my course?",
+        "Can you tell me the passing percentage for my program?"
+      ]
+    },
+    {
+      "category": "Academic",
+      "original_question": "What are the Degree Completion Requirements?",
+      "answer": "For 14-year degree programs: Minimum CGPA 2.00; for 16-year undergraduate programs: Minimum CGPA 2.00; for graduate programs (MPhil/MS): Minimum CGPA 2.50; for doctoral programs: Minimum CGPA 3.00. For further details, please refer to the UMT website or Participant’s Handbook.",
+      "possible_questions": [
+        "What do I need to complete my degree?",
+        "What are the requirements for graduating?",
+        "What is the minimum CGPA required to finish my program?",
+        "Can you explain the degree completion criteria for different programs?"
+      ]
+    },
+    {
+      "category": "Issuance/Verification of Transcripts/Degrees",
+      "original_question": "How to apply for an Incomplete Transcript / Progress Report?",
+      "answer": "Apply via the UMT Student Portal (https://online.umt.edu.pk). After clearance from all concerned departments, the Incomplete Transcript or Progress Report will be issued within 3 to 5 working days and can be collected from the Examination Office.",
+      "possible_questions": [
+        "What is the process to request an incomplete transcript?",
+        "How do I apply for a progress report?",
+        "Where can I get an incomplete transcript from?",
+        "Can you explain how to obtain a progress report?"
+      ]
+    },
+    {
+      "category": "Issuance/Verification of Transcripts/Degrees",
+      "original_question": "How to apply for a Final Transcript?",
+      "answer": "Eligibility: Must have completed all degree requirements. Apply via the UMT Student Portal (https://online.umt.edu.pk). After clearance, the Final Transcript will be issued within 3 to 5 working days. It can be collected in person from the Office of Controller Examinations (OCE) with your UMT ID Card, CNIC, Driving License, or Passport. If someone else is collecting it, an authority letter is required.",
+      "possible_questions": [
+        "What is the procedure to get my final transcript?",
+        "How do I apply for a final transcript after finishing my degree?",
+        "Can you guide me on obtaining a final transcript?",
+        "What are the requirements for applying for a final transcript?"
+      ]
+    },
+    {
+      "category": "Fee & Scholarships",
+      "original_question": "Does UMT offer any scholarships?",
+      "answer": "Yes, UMT offers merit-based and need-based scholarships. Detailed information can be found at: https://www.umt.edu.pk/org/Scholarship-Financial-Assistance/",
+      "possible_questions": [
+        "Are there scholarships available at UMT?",
+        "What types of scholarships does UMT provide?",
+        "Can you tell me about UMT’s scholarship programs?",
+        "Does UMT offer any financial aid or scholarship opportunities?"
+      ]
+    },
+    {
+      "category": "Examinations",
+      "original_question": "What happens if I miss a final exam due to an emergency?",
+      "answer": "If you miss a final exam due to a valid emergency, you may apply for a make-up exam by submitting an application to the Examination Office along with supporting documents.",
+      "possible_questions": [
+        "What should I do if I miss my final exam because of an emergency?",
+        "How can I apply for a make-up exam in an emergency?",
+        "What is the process for rescheduling a missed final exam?",
+        "Can you explain the make-up exam procedure for emergencies?"
+      ]
+    },
+    {
+      "category": "Examinations",
+      "original_question": "How can I apply for paper rechecking?",
+      "answer": "Paper rechecking requests must be submitted to the Examination Office within seven days of result publication, along with the required fee.",
+      "possible_questions": [
+        "What is the process for paper rechecking?",
+        "How do I request a recheck of my exam paper?",
+        "Can you explain how to apply for paper rechecking?",
+        "Where do I submit a paper rechecking request and fee?"
+      ]
+    },
+    {
+      "category": "Student ID & Portal",
+      "original_question": "What should I do if I forget my student portal password?",
+      "answer": "Click on the 'Forgot Password' link on the login page or contact IPC for assistance.",
+      "possible_questions": [
+        "How can I reset my student portal password?",
+        "I forgot my portal password—what should I do?",
+        "What is the procedure for recovering a forgotten password?",
+        "Can you help me with my student portal password recovery?"
+      ]
+    },
+    {
+      "category": "Student ID & Portal",
+      "original_question": "How can I get a new student ID card if I lost mine?",
+      "answer": "Request a new student ID card through the Student Portal, pay the applicable fee, and then collect your card from the PRS Help Desk.",
+      "possible_questions": [
+        "What do I do if I've lost my student ID?",
+        "How can I replace my lost student ID card?",
+        "Where do I apply for a new student ID?",
+        "Can you explain the process to get a replacement student card?"
+      ]
+    },
+    {
+      "category": "Graduation & Convocation",
+      "original_question": "When will the convocation date be announced?",
+      "answer": "Convocation dates are announced in the Academic Calendar and via email notifications.",
+      "possible_questions": [
+        "How do I find out when convocation will take place?",
+        "When is the convocation date going to be announced?",
+        "Where can I get information on the convocation schedule?",
+        "Is there a set date for the convocation announcement?"
+      ]
+    },
+    {
+      "category": "Graduation & Convocation",
+      "original_question": "What are the convocation participation charges?",
+      "answer": "The convocation participation charges are announced via email during the registration period.",
+      "possible_questions": [
+        "How much does it cost to participate in convocation?",
+        "What are the fees for convocation participation?",
+        "Can you tell me the convocation fee details?",
+        "Where can I find information about convocation charges?"
+      ]
+    },
+    {
+      "category": "Graduation & Convocation",
+      "original_question": "How many guests can I bring to the convocation?",
+      "answer": "The number of allowed guests is specified in the convocation invitation and email communication.",
+      "possible_questions": [
+        "What is the guest limit for convocation?",
+        "How many people am I allowed to invite to convocation?",
+        "Is there a limit on the number of convocation guests?",
+        "Where can I check the guest policy for convocation?"
+      ]
+    },
+    {
+      "category": "Semester Freeze / Leave",
+      "original_question": "What is the procedure to get a semester freeze?",
+      "answer": "Semester freeze requests must be submitted through the Student Portal. A participant may freeze up to two semesters in a four-year degree program (note: first-year students are not eligible).",
+      "possible_questions": [
+        "How do I apply for a semester freeze?",
+        "What is the process for freezing a semester?",
+        "Can you explain how to request a semester freeze?",
+        "What are the eligibility criteria for a semester freeze?"
+      ]
+    },
+    {
+      "category": "Semester Freeze / Leave",
+      "original_question": "How can I unfreeze my semester?",
+      "answer": "A participant can apply for semester unfreeze via the Student Portal before the start of the semester.",
+      "possible_questions": [
+        "How do I unfreeze a frozen semester?",
+        "What is the procedure to resume a frozen semester?",
+        "Can I reverse a semester freeze and how?",
+        "Where do I apply to unfreeze my semester?"
+      ]
+    },
+    {
+      "category": "Course Registration",
+      "original_question": "When do currently enrolled participants get registered for the next semester?",
+      "answer": "Course registration of continuing participants for the upcoming semester is done in advance, i.e. 2 weeks before the commencement of the next semester. Participants will register online through the Student Portal.",
+      "possible_questions": [
+        "When does course registration begin for continuing students?",
+        "What is the registration timeline for current participants?",
+        "How early do continuing students register for the next semester?",
+        "When will I be registered for the upcoming semester as a current student?"
+      ]
+    },
+    {
+      "category": "Course Registration",
+      "original_question": "When do fresh participants get registered for courses?",
+      "answer": "The course registration of undergraduate programs for fresh participants will be done automatically. Fresh participants of MS/MPhil/PhD programs can enroll on Orientation Day and during the first week of their classes.",
+      "possible_questions": [
+        "How are new students registered for courses?",
+        "When do fresh participants receive their course registrations?",
+        "Is course registration automatic for new undergraduates?",
+        "How do graduate fresh students register for courses?"
+      ]
+    },
+    {
+      "category": "Course Registration",
+      "original_question": "How much course load can a participant take in a semester?",
+      "answer": "A participant is required to register for courses as per the Institute/School offerings. Undergraduate programs allow up to 18 credit hours, while graduate programs allow up to 12 credit hours in a regular semester.",
+      "possible_questions": [
+        "What is the maximum course load per semester?",
+        "How many credit hours can I take in one semester?",
+        "Is there a limit to the number of courses I can register for?",
+        "What are the credit hour limits for undergraduate and graduate programs?"
+      ]
+    },
+    {
+      "category": "Course Registration",
+      "original_question": "When and how can a participant make changes in registration?",
+      "answer": "As per the Academic Calendar, changes in course registration are allowed during the add/drop period only. Changes can be made via the Student Portal.",
+      "possible_questions": [
+        "How can I modify my course registration?",
+        "When is it possible to make changes to my registration?",
+        "What is the procedure for add/drop changes in registration?",
+        "Can I alter my course selection after registration, and how?"
+      ]
+    },
+    {
+      "category": "Course Registration",
+      "original_question": "How can I repeat a course?",
+      "answer": "Courses with grades “F”, “SA”, “C-”, and “W” may be repeated in a regular semester or summer session (if offered). The higher grade will be counted in the CGPA.",
+      "possible_questions": [
+        "What is the process for repeating a course?",
+        "How do I retake a course that I failed?",
+        "Can I repeat a course, and what is the policy?",
+        "What are the rules for course repetition?"
+      ]
+    },
+    {
+      "category": "Fee & Scholarships",
+      "original_question": "What is the procedure to pay a fee in installments or get an extension?",
+      "answer": "Participants can apply through the Student Portal under the Fee category. Requests must be submitted at least five days before the official due date.",
+      "possible_questions": [
+        "How do I request fee installment payment or an extension?",
+        "What is the process to pay fees in installments?",
+        "Can I apply for a fee payment extension, and how?",
+        "Where do I submit an application for fee installment or extension?"
+      ]
+    },
+    {
+      "category": "Fee & Scholarships",
+      "original_question": "Can scholarships be transferred from an old ID to a new ID?",
+      "answer": "Participants need to apply again with their new student ID along with all relevant documents and submit them at the PRS Help Desk.",
+      "possible_questions": [
+        "How do I transfer my scholarship to a new student ID?",
+        "Is it possible to transfer scholarships to a new ID?",
+        "What are the steps to move scholarships from an old ID to a new one?",
+        "Can I have my scholarship benefits transferred to a new student ID, and how?"
+      ]
+    },
+    {
+      "category": "Fee & Scholarships",
+      "original_question": "How much Contribution for ILM Fund Scholarship will be charged after the due date?",
+      "answer": "Rs.3,000 + Rs.100 for the first day and an additional Rs.100 per day from the second day after the due date.",
+      "possible_questions": [
+        "What is the late fee for the ILM Fund Scholarship contribution?",
+        "How much will be charged if I pay after the due date for the ILM Fund Scholarship?",
+        "What are the charges for a delayed ILM Fund Scholarship payment?",
+        "Can you tell me the fee structure for late ILM Fund Scholarship payment?"
+      ]
+    },
+    {
+      "category": "Issuance/Verification of Transcripts/Degrees",
+      "original_question": "How to apply for an Urgent Degree?",
+      "answer": "Submit an Urgent Degree Issuance Form available in the UMT Examinations Download Section (https://www.umt.edu.pk/oce/Download-Forms.aspx). Pay the prescribed fee at the bank and submit the form at the Help Desk.",
+      "possible_questions": [
+        "What is the process to request an urgent degree?",
+        "How do I apply for an urgent degree issuance?",
+        "Can you explain the steps to obtain an urgent degree?",
+        "Where can I find the form to apply for an urgent degree?"
+      ]
+    },
+    {
+      "category": "Student Portal",
+      "original_question": "To whom should I contact if I cannot log in to the student portal?",
+      "answer": "If you face login issues, please contact IPC or send an email to [email protected].",
+      "possible_questions": [
+        "Who do I contact if I can't log in to the student portal?",
+        "Who should I reach out to regarding student portal login issues?",
+        "Where can I get help with accessing the student portal?",
+        "I’m having trouble logging in; whom should I contact?"
+      ]
+    },
+    {
+      "category": "Student Portal",
+      "original_question": "Who should I contact if I forgot my student portal password?",
+      "answer": "Click on 'Forgot Password' on the login page or contact IPC for assistance.",
+      "possible_questions": [
+        "Whom do I contact if I forget my portal password?",
+        "What should I do if I can’t remember my student portal password?",
+        "How do I recover my forgotten student portal password?",
+        "Who can help me if I forgot my portal password?"
+      ]
+    },
+    {
+      "category": "Examinations",
+      "original_question": "At least how much attendance is required to qualify for the end-term exam?",
+      "answer": "A minimum of 80% attendance is required to be eligible for final exams.",
+      "possible_questions": [
+        "What is the minimum attendance requirement for final exams?",
+        "How many classes must I attend to qualify for the exam?",
+        "What attendance percentage do I need to be eligible for finals?",
+        "Is 80% attendance mandatory for exam eligibility?"
+      ]
+    },
+    {
+      "category": "Examinations",
+      "original_question": "What is ‘I’ grade?",
+      "answer": "An 'I' grade stands for 'Incomplete'. It is given when a participant, due to an emergency or valid reason, is unable to complete course requirements. The participant must attend 80% of classes and attempt all assignments.",
+      "possible_questions": [
+        "What does an 'I' grade mean?",
+        "Can you explain what an 'Incomplete' grade is?",
+        "Why would I receive an 'I' grade?",
+        "What are the conditions for getting an 'I' grade?"
+      ]
+    },
+    {
+      "category": "Examinations",
+      "original_question": "What is the procedure for course withdrawal, and how does it affect CGPA?",
+      "answer": "A participant can withdraw from a course via the Student Portal before the deadline in the academic calendar. The withdrawn course appears as 'W' on the transcript but does not affect CGPA.",
+      "possible_questions": [
+        "How do I withdraw from a course, and what impact does it have on my CGPA?",
+        "What is the process for course withdrawal and its effect on my grades?",
+        "Can you explain the course withdrawal procedure and its consequences?",
+        "If I withdraw from a course, how will it affect my CGPA?"
+      ]
+    },
+    {
+      "category": "Credit Transfer / Migration",
+      "original_question": "Do international universities accept the transfer of credits from UMT?",
+      "answer": "All degree programs of UMT are recognized by HEC. Transcripts and course outlines attested by the Dean are required for transfer applications.",
+      "possible_questions": [
+        "Can I transfer my credits from UMT to an international university?",
+        "Do foreign universities accept UMT credits?",
+        "Are UMT degree credits recognized by international institutions?",
+        "What is needed to transfer credits from UMT abroad?"
+      ]
+    },
+    {
+      "category": "Credit Transfer / Migration",
+      "original_question": "What is the procedure to migrate from UMT to another HEC-chartered university?",
+      "answer": "Participants seeking migration should apply for University Leave on the Student Portal. After clearance, they can apply for a Progress Report, NOC, or other required documents.",
+      "possible_questions": [
+        "How do I migrate from UMT to another university?",
+        "What are the steps to transfer to another HEC-chartered university?",
+        "Can you guide me on the migration process from UMT?",
+        "What documents are needed for migrating from UMT?"
+      ]
+    },
+    {
+      "category": "Degree Programs",
+      "original_question": "What is the maximum duration of the program?",
+      "answer": "The maximum duration varies by program level: Undergraduate (4 years: 6 years max), Postgraduate (2 years: 3 years max), and PhD (5 years: 8 years max).",
+      "possible_questions": [
+        "How long do I have to complete my program?",
+        "What is the maximum allowed duration for each degree?",
+        "Can you tell me the maximum duration for undergraduate, postgraduate, and PhD programs?",
+        "What are the time limits for completing a degree at UMT?"
+      ]
+    },
+    {
+      "category": "Degree Programs",
+      "original_question": "Is Program Change possible and what is the process?",
+      "answer": "Program change requests can be made through the Student Portal. Approval is subject to admission criteria and a fee of Rs. 25,000.",
+      "possible_questions": [
+        "Can I change my academic program, and how do I do it?",
+        "What is the procedure for switching programs at UMT?",
+        "How do I apply for a program change?",
+        "What are the requirements and fees for a program change?"
+      ]
+    },
+    {
+      "category": "Degree Programs",
+      "original_question": "When do I take readmission in the same program?",
+      "answer": "If a student misses two consecutive semesters without formal approval, they must apply for readmission and pay a re-admission fee of Rs. 25,000.",
+      "possible_questions": [
+        "What is the readmission policy if I miss semesters?",
+        "When do I need to apply for readmission after missing classes?",
+        "What are the conditions for readmission in my program?",
+        "How does the readmission process work at UMT?"
+      ]
+    },
+    {
+      "category": "Student ID Card",
+      "original_question": "I lost my Student Card, how can I get a new one?",
+      "answer": "Submit a request via the Student Portal, pay the required fee, and collect the new card from the PRS Help Desk.",
+      "possible_questions": [
+        "What should I do if I misplace my student card?",
+        "How can I obtain a replacement student ID?",
+        "Where do I request a new student card if mine is lost?",
+        "Can you help me with getting a new student card?"
+      ]
+    },
+    {
+      "category": "Convocation",
+      "original_question": "What are the requirements for convocation?",
+      "answer": "Graduating students must complete all degree requirements, clear outstanding dues, and register online for convocation.",
+      "possible_questions": [
+        "What do I need to do to be eligible for convocation?",
+        "What are the convocation requirements for graduating students?",
+        "How do I qualify for convocation?",
+        "What steps must I complete to participate in convocation?"
+      ]
+    },
+    {
+      "category": "Convocation",
+      "original_question": "How can I collect my degree after convocation?",
+      "answer": "Degrees can be collected from the Examination Office after convocation by presenting a valid ID.",
+      "possible_questions": [
+        "Where do I pick up my degree after convocation?",
+        "How do I obtain my degree post-convocation?",
+        "What is the process for degree collection after convocation?",
+        "Can you tell me where to collect my degree after the ceremony?"
+      ]
+    },
+    {
+      "category": "General",
+      "original_question": "Welcome to UMT FAQs! How can we assist you today?",
+      "answer": "You can ask about admissions, academics, fees, scholarships, exams, and more.",
+      "possible_questions": [
+        "How can UMT FAQs help me?",
+        "What kind of information can I get from UMT FAQs?",
+        "What topics are covered in UMT FAQs?",
+        "Can you assist me with UMT-related questions?"
+      ]
+    },
+    {
+      "category": "Admissions",
+      "original_question": "What are the admission requirements for undergraduate programs at UMT?",
+      "answer": "Admission requirements at UMT for undergraduate programs include:\n- Minimum 50% marks in FSc, ICS, or Intermediate with Physics\n- Minimum 50% marks in UMT entrance test\n- No third division in matriculation\n- Application fee: Rs. 25,000\n- Required documents:\n  - Unofficial transcript\n  - Hope Certificate\n  - Two photographs\n  - One copy of CNIC of candidate\n  - One copy of CNIC of parent/guardian",
+      "possible_questions": [
+        "What are the criteria for undergraduate admission at UMT?",
+        "What qualifications do I need to apply for an undergraduate program?",
+        "Can you outline the admission requirements for UMT undergrad programs?",
+        "What do I need to apply for an undergraduate program at UMT?"
+      ]
+    },
+    {
+      "category": "Admissions",
+      "original_question": "What are the admission requirements for graduate programs at UMT?",
+      "answer": "Admission requirements at UMT for graduate programs include:\n- Minimum 60% marks in GAT or 70% marks in UGAT\n- Minimum 3.0 out of 4.0 CGPA or first division in MS/M.Phil\n- Interview\n- Any additional requirements specified by the department or regulatory body",
+      "possible_questions": [
+        "What qualifications do I need for a graduate program at UMT?",
+        "Can you explain the graduate admission requirements?",
+        "What criteria are required for applying to a graduate program?",
+        "What are the eligibility requirements for UMT graduate admissions?"
+      ]
+    },
+    {
+      "category": "Admissions",
+      "original_question": "What documents are required for an undergraduate application?",
+      "answer": "The following documents must be attached (3 copies of each, attested):\n- Matric Result or O-Level Result + Equivalence Certificate\n- Intermediate Results or A-Level Results + Equivalence Certificate\n- For result-awaiting students:\n  - First-year result\n  - Second-year roll number slip\n  - Statement of entry for A-Level students\n- 2 Photographs (Name mentioned on back of each picture)\n- 1 copy of CNIC of Candidate\n- 1 copy of CNIC of Parent/Guardian\n- Candidate’s domicile copy (Only for BS-CS, BS-SE, BS-IT, BS-AI, BS-CDS applicants)",
+      "possible_questions": [
+        "What paperwork do I need for an undergraduate application?",
+        "Which documents are necessary for applying as an undergraduate?",
+        "Can you list the required documents for a UMT undergraduate application?",
+        "What are the application document requirements for undergraduate programs?"
+      ]
+    },
+    {
+      "category": "Admissions",
+      "original_question": "What documents are required for a graduate application?",
+      "answer": "The following documents must be attached (3 copies of each, attested):\n- Matric Result or O-Level Result + Equivalence Certificate\n- Intermediate Results or A-Level Results + Equivalence Certificate\n- Bachelor or Master or MS/MPhil Result (depending on applicant level)\n  - Annual System: Full Result Card\n  - Semester System: Final Transcript\n- HEC attestation is mandatory for non-recognized institute degrees (Check HEC website)\n- For result-awaiting or supply-holder students:\n  - Annual System: 2-Year Degree\n    - Part-I Result\n    - Part-II Roll No. Slip\n  - Semester System: 4-Year Degree\n    - Provisional Transcript (till 7th Semester)\n    - Hope Certificate or Degree Completion Letter (Signed and Stamped by Controller Examination/Registrar)\n- For UMT result-awaiting alumni:\n  - Unofficial transcript\n  - Hope Certificate (Signed and Stamped by Controller Examination/Registrar)\n- 2 Photographs (Name mentioned on back of each picture)\n- 1 copy of CNIC of Candidate\n- 1 copy of CNIC of Parent/Guardian",
+      "possible_questions": [
+        "What paperwork is needed for a graduate application?",
+        "Which documents must be submitted for a graduate application?",
+        "Can you list the required documents for UMT graduate applications?",
+        "What are the document requirements for graduate admissions at UMT?"
+      ]
+    },
+    {
+      "category": "General",
+      "original_question": "What can you tell me?",
+      "answer": "You can ask about admissions, academics, fees, scholarships, exams, and more.",
+      "possible_questions": [
+        "What information can you provide about UMT?",
+        "Can you give me details about UMT services?",
+        "What topics are covered in UMT FAQs?",
+        "Tell me about the information available at UMT."
+      ]
+    },
+    {
+      "category": "Admissions",
+      "original_question": "How to apply for admission at UMT?",
+      "answer": "You can apply online through the UMT admissions portal:\n1. Sign up at [UMT Admissions Portal](https://onlineadmissions.umt.edu.pk/) to create an account.\n2. Sign in with your email and password, and complete your application form.\n3. Fields marked with (*) are mandatory.\n4. Click 'Save and Proceed' at each step to continue or return later to complete the form.\n5. Pay the application processing fee of Rs. 2000/- through:\n   - Bank voucher (provided in the application)\n   - HBL deposit slip (write your VPN on it)\n   - Fund transfer to UMT’s bank account (HBL 2349-70000003-03)\n6. Upload a scanned copy of the payment slip in the required section.\n7. Submit your application.",
+      "possible_questions": [
+        "What is the process for applying to UMT?",
+        "How do I apply for admission at UMT?",
+        "Can you guide me on the UMT application process?",
+        "Where do I submit my application for UMT admissions?"
+      ]
+    },
+    {
+      "category": "Admissions",
+      "original_question": "Who should I contact for admission queries?",
+      "answer": "For Undergraduate admissions: undergraduate@umt.edu.pk\nFor Graduate admissions: graduate@umt.edu.pk\nFor general queries: admissions@umt.edu.pk\nYou can also call: 042-111-868-868 (Tel Ext: 3307)",
+      "possible_questions": [
+        "Whom do I contact for questions about admissions?",
+        "Who can I reach out to for UMT admission queries?",
+        "What is the contact information for admission inquiries?",
+        "Who should I email or call regarding UMT admissions?"
+      ]
+    },
+    {
+      "category": "Admissions",
+      "original_question": "What is the fee structure?",
+      "answer": "To Learn about fee structure, please visit this url: https://admissions.umt.edu.pk/fee.aspx ",
+      "possible_questions": [
+        "What is the Fee?",
+        "Fee of Graduate Program?",
+        "Fee of undergraduade Program?",
+        "How much is the fee?"
+      ]
+    }
+  ]
+}
