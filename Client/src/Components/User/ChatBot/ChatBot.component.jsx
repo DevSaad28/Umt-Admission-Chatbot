@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react"
 import axios from "axios"
+import {API_BASE_URL} from "../../../url"
 
 // Message component for individual chat messages
 const Message = ({ message, isUser, timestamp, category, confidence }) => {
@@ -78,9 +79,6 @@ function ChatBot() {
   const [showSuggestions, setShowSuggestions] = useState(true)
   const messagesEndRef = useRef(null)
   const inputRef = useRef(null)
-
-  // API configuration
-  const API_BASE_URL = "http://localhost:8000"
 
   // Quick suggestion questions
   const quickSuggestions = [
