@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react"
 import axios from "axios"
-import {API_BASE_URL} from "../../../url"
+import {API_BASE_URL,Base_Url} from "../../../url"
+
 
 // Message component for individual chat messages
 const Message = ({ message, isUser, timestamp, category, confidence }) => {
@@ -77,6 +78,7 @@ function ChatBot() {
   const [isTyping, setIsTyping] = useState(false)
   const [isConnected, setIsConnected] = useState(true)
   const [showSuggestions, setShowSuggestions] = useState(true)
+  const [userId] = useState(`user_${Date.now()}`) // Generate user ID once
   const messagesEndRef = useRef(null)
   const inputRef = useRef(null)
 
@@ -119,6 +121,27 @@ function ChatBot() {
     }
   }
 
+  // Function to store chat in Node.js database
+  const storeChatInDatabase = async (userMessage, aiResponse, category, confidence, matchedQuestion) => {
+    try {
+      const response = await axios.post(`${Base_Url}/api/chat/send`, {
+        message: userMessage,
+        user_id: userId,
+        ai_response: aiResponse,
+        category: category,
+        confidence: confidence,
+        matched_question: matchedQuestion,
+      })
+
+      console.log("Chat stored successfully:", response.data)
+      return response.data
+    } catch (error) {
+      console.error("Error storing chat in database:", error)
+      // Don't throw error here to avoid breaking the chat flow
+      return null
+    }
+  }
+
   const sendMessage = async (messageText = inputMessage) => {
     if (!messageText.trim()) return
 
@@ -135,20 +158,25 @@ function ChatBot() {
     setShowSuggestions(false)
 
     try {
-      const response = await axios.post(`${API_BASE_URL}/chat`, {
+      const fastApiResponse = await axios.post(`${API_BASE_URL}/chat`, {
         message: messageText,
-        user_id: `user_${Date.now()}`,
+        user_id: userId,
       })
+
+      const { response: aiResponse, category, confidence, matched_question } = fastApiResponse.data
+
+
+      await storeChatInDatabase(messageText, aiResponse, category, confidence, matched_question)
 
       // Simulate typing delay for better UX
       setTimeout(() => {
         const botMessage = {
           id: Date.now() + 1,
-          text: response.data.response,
+          text: aiResponse,
           isUser: false,
           timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
-          category: response.data.category,
-          confidence: response.data.confidence,
+          category: category,
+          confidence: confidence,
         }
 
         setMessages((prev) => [...prev, botMessage])
@@ -314,4 +342,4 @@ function ChatBot() {
   )
 }
 
-export default ChatBot;
+export default ChatBot
