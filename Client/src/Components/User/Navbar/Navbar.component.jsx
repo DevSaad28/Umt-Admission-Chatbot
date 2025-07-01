@@ -53,7 +53,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="w-28 flex items-center">
-          <img className="mt-1" src="/images/logo.png" alt="Logo" />
+          <img className="mt-1" src="/images/logo.svg" alt="Logo" />
         </div>
 
         {/* Right side buttons */}
