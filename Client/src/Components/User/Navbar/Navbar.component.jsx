@@ -49,20 +49,20 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="bg-white border-b border-gray-200 px-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+    <nav className="w-1/2 h-screen  flex  items-center justify-between  px-2">
+      <div className=" bg-transparent mx-auto gap-6 flex flex-col items-center justify-between">
         {/* Logo */}
-        <div className="w-28 flex items-center">
-          <img className="mt-1" src="/images/logo.svg" alt="Logo" />
+        <div className="  flex items-center">
+          <img className=" " src="/images/logo.svg" alt="Logo" />
         </div>
 
         {/* Right side buttons */}
         <div className="flex items-center space-x-3">
           {isAuthenticated ? (
             // Authenticated user UI
-            <div className="flex items-center space-x-3">
+            <div className="flex flex-col  items-center space-y-6">
               {/* User info */}
-              <div className="flex items-center space-x-2 px-3 py-2 bg-gray-50 rounded-lg">
+              <div className="flex items-center space-x-2 px-3 py-2  rounded-lg">
                 <User className="w-4 h-4 text-gray-600" />
                 <span className="text-gray-700 font-medium text-sm">{user?.name || user?.email || "User"}</span>
               </div>
@@ -70,7 +70,7 @@ const Navbar = () => {
               {/* Logout button */}
               <button
                 onClick={handleLogout}
-                className="flex items-center space-x-2 px-4 py-2 border border-red-300 text-red-600 rounded-lg hover:bg-red-50 hover:border-red-400 transition-colors hover:cursor-pointer"
+                className="flex items-center space-x-2 px-4 py-2 border border-red-300 bg-red-300/20 text-red-600 rounded-lg hover:bg-red-50 hover:border-red-400 transition-colors hover:cursor-pointer"
               >
                 <LogOut className="w-4 h-4" />
                 <span>Logout</span>

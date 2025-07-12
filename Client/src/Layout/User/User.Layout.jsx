@@ -10,8 +10,10 @@ const Main = () => {
       {/* Render the ToastList at the top level */}
       <ToastList />
 
-      <NavBar />
-      <Outlet />
+      <div className="flex  bg-gradient-to-br from-blue-500 via-indigo-300 to-indigo-500">
+        <NavBar />
+        <Outlet />
+      </div>
     </>
   )
 }

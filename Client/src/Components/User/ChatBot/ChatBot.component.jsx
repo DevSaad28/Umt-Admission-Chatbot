@@ -4,22 +4,23 @@ import {API_BASE_URL,Base_Url} from "../../../url"
 
 
 // Message component for individual chat messages
-const Message = ({ message, isUser, timestamp, category, confidence }) => {
+const Message = ({ message, isUser, category, confidence }) => {
   return (
     <div className={`flex ${isUser ? "justify-end" : "justify-start"} mb-4`}>
       <div
-        className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
-          isUser ? "bg-blue-500 text-white rounded-br-none" : "bg-gray-200 text-gray-800 rounded-bl-none"
+        className={`max-w-xs lg:max-w-md p-8 flex-col flex gap-2  ${
+          isUser ? "bg-gradient-to-br from-blue-300 to-indigo-500 text-white  rounded-4xl rounded-br-none " : "bg-gray-200 rounded-4xl rounded-bl-none text-gray-800 "
         }`}
       >
-        <p className="text-sm">{message}</p>
-        {!isUser && category && (
+         {!isUser && category && (
           <div className="mt-2 text-xs opacity-75">
             <span className="bg-gray-300 text-gray-700 px-2 py-1 rounded-full">{category}</span>
             {confidence > 0 && <span className="ml-2 text-gray-600">{Math.round(confidence * 100)}% match</span>}
           </div>
         )}
-        <p className="text-xs mt-1 opacity-75">{timestamp}</p>
+        <p className="text-sm text-wrap">{message}</p>
+       
+       
       </div>
     </div>
   )
@@ -225,14 +226,14 @@ function ChatBot() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen overflow-hidden w-1/2 pr-12 ">
+      <div className=" mx-auto flex items-center justify-center w-full h-screen">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="bg-white rounded-t-lg shadow-lg p-6 border-b">
+          <div className="bg-white/20 rounded-t-lg shadow-lg p-6 border-b">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-indigo-500 rounded-full flex items-center justify-center">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
@@ -261,7 +262,7 @@ function ChatBot() {
               </div>
               <button
                 onClick={clearChat}
-                className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg transition-colors duration-200"
+                className="bg-gray-100/40 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg transition-colors duration-200"
               >
                 Clear Chat
               </button>
@@ -269,13 +270,13 @@ function ChatBot() {
           </div>
 
           {/* Chat Messages */}
-          <div className="bg-white shadow-lg h-96 overflow-y-auto p-6">
+          <div className="bg-white/40 shadow-lg h-96 overflow-y-auto p-6">
             {messages.map((message) => (
               <Message
                 key={message.id}
                 message={message.text}
                 isUser={message.isUser}
-                timestamp={message.timestamp}
+                
                 category={message.category}
                 confidence={message.confidence}
               />
@@ -293,7 +294,7 @@ function ChatBot() {
           </div>
 
           {/* Input Form */}
-          <div className="bg-white rounded-b-lg shadow-lg p-6 border-t">
+          <div className="bg-white/20 rounded-b-lg shadow-lg p-6 border-t">
             <form onSubmit={handleSubmit} className="flex space-x-4">
               <input
                 ref={inputRef}
@@ -301,23 +302,16 @@ function ChatBot() {
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
                 placeholder="Type your question here..."
-                className="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="flex-1 border text-white  border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 disabled={isTyping}
               />
               <button
                 type="submit"
                 disabled={!inputMessage.trim() || isTyping}
-                className="bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300 text-white px-6 py-2 rounded-lg transition-colors duration-200 flex items-center space-x-2"
+                className="bg-gradient-to-br from-blue-300 to-indigo-500 hover:bg-blue-600 disabled:from-gray-300/20 disabled:to-gray-300/20 disabled:text-white/20 text-white px-6 py-2 rounded-lg transition-colors duration-200 flex items-center space-x-2"
               >
                 <span>Send</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-                  />
-                </svg>
+      
               </button>
             </form>
 
@@ -332,7 +326,7 @@ function ChatBot() {
           </div>
 
           {/* Footer */}
-          <div className="mt-6 text-center text-sm text-gray-600">
+          <div className="mt-6 text-center text-sm text-white">
             <p>University of Management and Technology (UMT) - FAQ Assistant</p>
             <p className="mt-1">Ask about admissions, academics, fees, scholarships, and more!</p>
           </div>
