@@ -62,7 +62,6 @@
       "possible_questions": [
         "Can you explain what GPA means and how to calculate it?",
         "How do I compute my GPA?",
-        "what is GPA",
         "What does GPA stand for and how is it determined?",
         "How is the grade point average calculated?"
       ]
@@ -73,7 +72,6 @@
       "answer": "CGPA (Cumulative Grade Point Average) is calculated by multiplying the credit hours of each subject by the grade points achieved, summing these values for all semesters, and then dividing by the total credit hours registered over all semesters.",
       "possible_questions": [
         "How is CGPA calculated?",
-        "What is CGPA",
         "Can you explain how to compute CGPA?",
         "What does CGPA mean and how do I calculate it?",
         "What is the method for determining my cumulative GPA?"
@@ -587,6 +585,17 @@
     },
     {
       "category": "Admissions",
+      "original_question": "How to apply for admission (in person and online)?",
+      "answer": "Admission Process (In person): Applicants seeking admission to undergraduate programs are encouraged to visit the UMT campus and apply in person to receive proper guidance. The application will be processed and completed promptly.\n\nOnline Application: Alternatively, applicants can apply online from the comfort of their homes. The online application process is divided into easy-to-follow sections that help applicants save valuable time and conserve the environment.\n\nSteps for Online Application:\n- Sign up at the UMT admissions portal\n- Complete the application process (guidelines are provided at each step)\n- Fields marked with (*) are mandatory to fill\n- An application processing fee of Rs. 2000/- is mandatory and can be deposited at HBL (Habib Bank Limited)\n- After payment, upload a picture or scanned copy of the payment slip in the required section\n- Payment options include:\n  - Bank voucher (provided in the application)\n  - HBL deposit slip (please write your VPN on it)\n  - Fund transfer to UMT’s bank account (HBL 2349-70000003-03)",
+      "possible_questions": [
+        "How do I apply for admission in person?",
+        "What is the online application process at UMT?",
+        "Can I apply to UMT both online and in person?",
+        "What are the steps to apply for admission at UMT?"
+      ]
+    },
+    {
+      "category": "Admissions",
       "original_question": "How to apply for admission at UMT?",
       "answer": "You can apply online through the UMT admissions portal:\n1. Sign up at [UMT Admissions Portal](https://onlineadmissions.umt.edu.pk/) to create an account.\n2. Sign in with your email and password, and complete your application form.\n3. Fields marked with (*) are mandatory.\n4. Click 'Save and Proceed' at each step to continue or return later to complete the form.\n5. Pay the application processing fee of Rs. 2000/- through:\n   - Bank voucher (provided in the application)\n   - HBL deposit slip (write your VPN on it)\n   - Fund transfer to UMT’s bank account (HBL 2349-70000003-03)\n6. Upload a scanned copy of the payment slip in the required section.\n7. Submit your application.",
       "possible_questions": [
@@ -616,6 +625,28 @@
         "Fee of Graduate Program?",
         "Fee of undergraduade Program?",
         "How much is the fee?"
+      ]
+    },
+    {
+      "category": "Admissions",
+      "original_question": "What are the admission requirements and merit criteria for Fall 2025?",
+      "answer": "The admission requirements for all undergraduate and graduate programs accepting applications for Fall 2025 are mentioned on the websites of the respective schools and institutes offering them. Alternatively, click here to search for a relevant program.\n\nThe Admission Criteria for enrolling in programs offered by UMT generally include meeting the standards set for undergraduate, graduate, and PhD programs. Entrance test samples are available on the OIA website. All admissions are based on merit as per the stated criteria or additional criteria (if applicable).\n\nUndergraduate Merit Calculation:\n- 20% of Marks obtained in Matric\n- 30% of Marks obtained in the Entrance Test\n- 50% of Marks obtained in Intermediate\n- Interview if required\n\nUndergraduate (Engineering programs) Merit Calculation:\n- Passing of entry Test with Minimum 33% marks from Designated Entity / Testing Agency is mandatory.\n- 50% of Marks obtained in Intermediate\n- 33% of Marks obtained in the Entrance Test\n- 17% of Marks obtained in Matric\n- ICS students with Physics, Mathematics, and Computer Studies backgrounds are also eligible for admission to Engineering programs.\n\nUndergraduate (LLB program) Merit Calculation:\n- Law Admission Test (LAT) is mandatory\n\nGraduate and PhD Programs Merit Calculation:\n- Academic Marks\n- UGAT/GAT Marks\n- Panel Interview Marks",
+      "possible_questions": [
+        "What is the merit calculation for undergraduate programs at UMT?",
+        "How is admission decided for engineering or LLB programs?",
+        "Where can I find admission requirements for Fall 2025?",
+        "What are the criteria for graduate and PhD admissions?"
+      ]
+    },
+    {
+      "category": "Admissions",
+      "original_question": "How can I get admission at UMT?",
+      "answer": "To apply for admission to the University of Management and Technology (UMT), you can either visit the UMT campus or apply online. The application process involves submitting an application form, paying a processing fee, appearing for an entry test and/or interview, and finally, submitting required documents with the fee voucher.\n\nHere's a more detailed breakdown:\n\n1. Online Application:\n- Sign up on the UMT admissions portal: Go to the UMT admissions portal.\n- Complete your application: Fill out the online application form and upload required documents.\n- Pay the application processing fee: The fee is Rs. 2000, payable at any branch of HBL by using the cash deposit slip available at HBL banks.\n\n2. On-Campus Application:\n- Visit the UMT Admissions Office: Go to the UMT campus in person.\n- Get a token and career counseling: Visit the Reception Counter to obtain a token and then engage with OIA staff for career counseling.\n- Get a Visitor Profile Number (VPN): You'll need a VPN to proceed with the application process.\n- Purchase an Admission Form: Obtain the Admission Form from the Form Issuance Counter.\n- Submit the completed form: Once filled, submit the admission form at the Form Receiving Section.",
+      "possible_questions": [
+        "How can I get admission at UMT?",
+        "What is the process to apply for UMT?",
+        "Can I apply to UMT online or in person?",
+        "What steps do I need to follow to get admission at UMT?"
       ]
     }
   ]
