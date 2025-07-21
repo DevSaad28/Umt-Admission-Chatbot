@@ -244,7 +244,7 @@ function ChatBot() {
                   </svg>
                 </div>
                 <div>
-                  <h1 className="text-xl font-bold text-gray-800">UMT FAQ Assistant</h1>
+                  <h1 className="text-xl font-bold text-gray-800">UMT Admitbot</h1>
                   <p className="text-sm text-gray-600">
                     {isConnected ? (
                       <span className="flex items-center">
