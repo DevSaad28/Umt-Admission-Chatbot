@@ -23,23 +23,20 @@ export const AuthProvider = ({ children }) => {
     setLoading(false)
   }, [])
 
-  const login = (userData, remember = false) => {
-    setRememberMe(remember)
+ const login = (res) => {
+  const userData = {
+    _id: res._id,
+    token: res.token,
+  };
 
-    if (remember) {
-      // Store in localStorage for persistent login
-      localStorage.setItem("User_Chat_Bot_Token", JSON.stringify(userData))
-      // Clear sessionStorage if it exists
-      sessionStorage.removeItem("User_Chat_Bot_Token")
-    } else {
-      // Store in sessionStorage for session-only login
-      sessionStorage.setItem("User_Chat_Bot_Token", JSON.stringify(userData))
-      // Clear localStorage if it exists
-      localStorage.removeItem("User_Chat_Bot_Token")
-    }
+  // ✅ Always save in localStorage regardless of rememberMe
+  localStorage.setItem("User_Chat_Bot_Token", JSON.stringify(userData));
+  sessionStorage.removeItem("User_Chat_Bot_Token");
 
-    setUser(userData)
-  }
+  setUser(userData);
+};
+
+
 
   const logout = () => {
     // Clear from both storages to ensure complete logout

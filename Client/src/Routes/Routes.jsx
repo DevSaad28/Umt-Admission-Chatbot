@@ -4,7 +4,7 @@ import AuthLayout from "../Layout/Auth/Auth.Layout";
 import UserLayout from "../Layout/User/User.Layout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { PrivateRoute, PublicRoute } from "./ProtectedRoutes";
-
+import LiveChat from "../Pages/User/LiveChatbot.Page";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <ChatBot />,
+      },
+       {
+        path: "livechat",
+        element: <LiveChat />,
       },
     ],
   },

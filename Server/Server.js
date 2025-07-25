@@ -62,3 +62,5 @@ mongoose
   .catch((error) => {
     console.log(error);
   });
+const initChatSocket = require("./chatSocket");
+initChatSocket(server); //
