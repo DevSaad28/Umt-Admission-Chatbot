@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react"
 import axios from "axios"
-import {API_BASE_URL,Base_Url} from "../../../url"
+import { API_BASE_URL, Base_Url } from "../../../url"
+import { useNavigate } from "react-router-dom";
 
 import ReactMarkdown from "react-markdown"
 // Message component for individual chat messages
@@ -14,11 +15,10 @@ const Message = ({ message, isUser, category }) => {
   return (
     <div className={`flex ${isUser ? "justify-end" : "justify-start"} mb-4`}>
       <div
-        className={`max-w-xs lg:max-w-md px-6 py-4 flex-col flex gap-2 ${
-          isUser
+        className={`max-w-xs lg:max-w-md px-6 py-4 flex-col flex gap-2 ${isUser
             ? "bg-gradient-to-br from-blue-300 to-indigo-500 text-white rounded-4xl rounded-br-none"
             : "bg-gray-100 text-gray-800 rounded-4xl rounded-bl-none"
-        }`}
+          }`}
       >
         <ReactMarkdown
           components={{
@@ -243,6 +243,7 @@ function ChatBot() {
     ])
     setShowSuggestions(true)
   }
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen overflow-hidden w-1/2 pr-12 ">
@@ -279,13 +280,22 @@ function ChatBot() {
                   </p>
                 </div>
               </div>
+              <div className="flex space-x-4">
               <button
                 onClick={clearChat}
                 className="bg-gray-100/40 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg transition-colors duration-200"
               >
                 Clear Chat
               </button>
+              <button
+                onClick={() => navigate("/chat/livechat")}
+                className="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+              >
+                Live Chat
+              </button>
+              </div>
             </div>
+
           </div>
 
           {/* Chat Messages */}
@@ -295,7 +305,7 @@ function ChatBot() {
                 key={message.id}
                 message={message.text}
                 isUser={message.isUser}
-                
+
                 category={message.category}
                 confidence={message.confidence}
               />
@@ -330,7 +340,7 @@ function ChatBot() {
                 className="bg-gradient-to-br from-blue-300 to-indigo-500 hover:bg-blue-600 disabled:from-gray-300/20 disabled:to-gray-300/20 disabled:text-white/20 text-white px-6 py-2 rounded-lg transition-colors duration-200 flex items-center space-x-2"
               >
                 <span>Send</span>
-      
+
               </button>
             </form>
 

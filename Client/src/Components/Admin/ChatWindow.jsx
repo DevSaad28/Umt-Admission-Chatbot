@@ -83,7 +83,7 @@ const ChatWindow = ({ user, token }) => {
   };
 
   return (
-    <div className="w-full max-w-3xl mx-auto flex flex-col h-[85vh] rounded-xl bg-white/20 shadow-lg backdrop-blur border border-gray-300">
+    <div className="w-full  max-w-3xl mx-auto flex flex-col h-[90vh] rounded-r-xl bg-white/20 shadow-lg backdrop-blur border border-gray-300">
       {/* Header */}
       <div className="px-6 py-4 bg-white/30 backdrop-blur border-b border-indigo-200 text-indigo-900 rounded-t-xl text-center font-semibold">
         Conversation with {user?.name || "User"}

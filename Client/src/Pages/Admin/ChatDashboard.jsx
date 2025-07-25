@@ -27,8 +27,8 @@ const ChatDashboard = () => {
   }, []);
 
   return (
-    <div className="flex h-[90vh]  items-center justify-center ">
-        <div className="flex max-w-7xl mx-auto border border-gray-300 rounded-xl shadow-lg bg-white/30 backdrop-blur overflow-hidden">
+    <div className="flex h-screen  items-center justify-center ">
+        <div className="flex max-w-7xl h-[90vh] mx-auto border border-gray-300 rounded-xl shadow-lg bg-white/30 backdrop-blur overflow-hidden">
       {/* Sidebar */}
       <div className="w-[280px] border-r border-gray-300 bg-white/40 backdrop-blur flex flex-col">
         <h3 className="text-center px-4 py-5 text-lg font-semibold text-indigo-900 border-b border-gray-300">
@@ -63,8 +63,8 @@ const ChatDashboard = () => {
         {selectedUser ? (
           <ChatWindow user={selectedUser} token={token} />
         ) : (
-          <div className="flex items-center justify-center h-full text-gray-600 font-medium text-base">
-            Select a user to start chatting
+          <div className="flex items-center min-w-100 justify-center h-full text-gray-600 font-medium text-base">
+            Select a User
           </div>
         )}
       </div>
