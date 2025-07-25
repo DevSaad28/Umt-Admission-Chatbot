@@ -2,29 +2,49 @@ import { useState, useRef, useEffect } from "react"
 import axios from "axios"
 import {API_BASE_URL,Base_Url} from "../../../url"
 
-
+import ReactMarkdown from "react-markdown"
 // Message component for individual chat messages
-const Message = ({ message, isUser, category, confidence }) => {
+const formatLinksToMarkdown = (text) => {
+  return text.replace(/(https?:\/\/[^\s]+)/g, (url) => `[${url}](${url})`)
+}
+
+const Message = ({ message, isUser, category }) => {
+  const formattedMessage = formatLinksToMarkdown(message)
+
   return (
     <div className={`flex ${isUser ? "justify-end" : "justify-start"} mb-4`}>
       <div
-        className={`max-w-xs lg:max-w-md p-8 flex-col flex gap-2  ${
-          isUser ? "bg-gradient-to-br from-blue-300 to-indigo-500 text-white  rounded-4xl rounded-br-none " : "bg-gray-200 rounded-4xl rounded-bl-none text-gray-800 "
+        className={`max-w-xs lg:max-w-md px-6 py-4 flex-col flex gap-2 ${
+          isUser
+            ? "bg-gradient-to-br from-blue-300 to-indigo-500 text-white rounded-4xl rounded-br-none"
+            : "bg-gray-100 text-gray-800 rounded-4xl rounded-bl-none"
         }`}
       >
-         {!isUser && category && (
-          <div className="mt-2 text-xs opacity-75">
-            <span className="bg-gray-300 text-gray-700 px-2 py-1 rounded-full">{category}</span>
-            {confidence > 0 && <span className="ml-2 text-gray-600">{Math.round(confidence * 100)}% match</span>}
-          </div>
-        )}
-        <p className="text-sm text-wrap">{message}</p>
-       
-       
+        <ReactMarkdown
+          components={{
+            p: ({ node, ...props }) => <p className="text-sm leading-relaxed mb-2" {...props} />,
+            strong: ({ node, ...props }) => <strong className="font-semibold" {...props} />,
+            a: ({ node, ...props }) => (
+              <a className="text-blue-600 underline hover:text-blue-800" target="_blank" rel="noopener noreferrer" {...props} />
+            ),
+            ul: ({ node, ...props }) => <ul className="list-disc pl-5 space-y-1 text-sm" {...props} />,
+            ol: ({ node, ...props }) => <ol className="list-decimal pl-5 space-y-1 text-sm" {...props} />,
+            li: ({ node, ...props }) => <li className="text-sm" {...props} />,
+            code: ({ node, ...props }) => (
+              <code className="bg-gray-200 text-gray-800 px-1 py-0.5 rounded text-xs" {...props} />
+            ),
+            blockquote: ({ node, ...props }) => (
+              <blockquote className="border-l-4 border-gray-300 pl-4 italic text-sm text-gray-700" {...props} />
+            ),
+          }}
+        >
+          {formattedMessage}
+        </ReactMarkdown>
       </div>
     </div>
   )
 }
+
 
 // Typing indicator component
 const TypingIndicator = () => {
@@ -88,7 +108,6 @@ function ChatBot() {
     "What are admission requirements?",
     "How to apply for admission?",
     "What is GPA?",
-    "Are there scholarships available?",
     "What is the fee structure?",
     "How to check CGPA?",
   ]
