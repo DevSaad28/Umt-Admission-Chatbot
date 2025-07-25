@@ -9,4 +9,6 @@ const LiveConversation = `${Base_Url}/api/livechat/conversation`;
 
 const LiveChatSend = `${Base_Url}/api/livechat/send`;
 
-export { User_Signup, User_Login, User_Search, API_BASE_URL ,Base_Url, LiveChatSend ,LiveConversation};
+const AllUsers = `${Base_Url}/api/livechat/users`;
+
+export { User_Signup, User_Login, User_Search, API_BASE_URL ,Base_Url, LiveChatSend ,LiveConversation,AllUsers};

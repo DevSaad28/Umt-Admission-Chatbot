@@ -1,26 +1,27 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { chatSocket } from "../../Socket/chatSocket";
 import axios from "axios";
-import {LiveChatSend,LiveConversation} from "../../url";
+import { LiveChatSend, LiveConversation } from "../../url";
+
 const ADMIN_ID = "908123097123"; // fixed admin ID
 
 const ChatWindow = ({ user, token }) => {
-  const [messages, setMessages] = useState([]); // ✅ always initialize as array
+  const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState("");
   const messagesEndRef = useRef(null);
 
-  // 🔄 Scroll to bottom on new messages
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // ✅ Load old messages
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
   const fetchMessages = async () => {
     try {
       const res = await axios.get(LiveConversation, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+        headers: { Authorization: `Bearer ${token}` },
       });
 
       const fetchedMessages = Array.isArray(res.data)
@@ -30,13 +31,11 @@ const ChatWindow = ({ user, token }) => {
         : [];
 
       setMessages(fetchedMessages);
-      scrollToBottom();
     } catch (err) {
       console.error("Error fetching messages", err);
     }
   };
 
-  // ✅ Setup socket connection
   useEffect(() => {
     if (!user?._id) return;
 
@@ -48,7 +47,6 @@ const ChatWindow = ({ user, token }) => {
 
     chatSocket.on("message received", (newMsg) => {
       setMessages((prev) => [...prev, newMsg]);
-      scrollToBottom();
     });
 
     fetchMessages();
@@ -59,7 +57,6 @@ const ChatWindow = ({ user, token }) => {
     };
   }, [user]);
 
-  // ✅ Send message
   const handleSend = async (e) => {
     e.preventDefault();
     if (!message.trim()) return;
@@ -77,47 +74,58 @@ const ChatWindow = ({ user, token }) => {
 
       setMessages((prev) => [...prev, data]);
       setMessage("");
-      scrollToBottom();
 
-      // emit via socket
-      chatSocket.emit("new message", {
-        sender: user._id,
-        receiver: ADMIN_ID,
-        message,
-      });
+      chatSocket.emit("new message", data);
     } catch (err) {
       console.error("Message send error", err);
     }
   };
 
   return (
-    <div style={styles.chatContainer}>
-      <div style={styles.chatBox}>
-        {Array.isArray(messages) &&
-          messages.map((msg, idx) => (
-            <div
-              key={idx}
-              style={{
-                ...styles.message,
-                alignSelf: msg.sender === user._id ? "flex-end" : "flex-start",
-                background: msg.sender === user._id ? "#DCF8C6" : "#FFF",
-              }}
-            >
-              {msg.message}
-            </div>
-          ))}
+    <div className="w-full max-w-4xl mx-auto flex flex-col h-[85vh] rounded-xl bg-white/20 shadow-lg backdrop-blur border border-gray-300">
+        
+      {/* Header */}
+      <div className="px-6 py-4 bg-indigo-100 border-b border-indigo-300 text-indigo-900 rounded-t-xl">
+        <h2 className="text-base font-semibold text-center">
+          Chat with {user?.name || "User"}
+        </h2>
+      </div>
+
+      {/* Chat messages */}
+      <div className="flex-1 p-6 overflow-y-auto bg-white/40 flex flex-col">
+        {messages.map((msg, idx) => (
+          <div
+            key={idx}
+            className={`px-5 py-3 mb-2 text-sm rounded-3xl max-w-[70%] shadow 
+              ${
+                msg.sender === user._id
+                  ? "self-end bg-indigo-300 text-gray-900 rounded-br-none"
+                  : "self-start bg-indigo-100 text-gray-800 rounded-bl-none"
+              }`}
+          >
+            {msg.message}
+          </div>
+        ))}
         <div ref={messagesEndRef} />
       </div>
 
-      <form onSubmit={handleSend} style={styles.inputForm}>
+      {/* Input */}
+      <form
+        onSubmit={handleSend}
+        className="flex gap-4 px-6 py-4 bg-white/20 backdrop-blur border-t border-gray-200 rounded-b-xl"
+      >
         <input
           type="text"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder="Type your message..."
-          style={styles.input}
+          className="flex-1 px-4 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-300 bg-white/80 text-gray-900"
         />
-        <button type="submit" style={styles.button}>
+        <button
+          type="submit"
+          disabled={!message.trim()}
+          className="px-5 py-2 bg-gradient-to-br from-blue-300 to-indigo-500 text-white text-sm font-medium rounded-md hover:opacity-90 transition disabled:from-gray-300/40 disabled:to-gray-300/40 disabled:text-white/30"
+        >
           Send
         </button>
       </form>
@@ -126,48 +134,3 @@ const ChatWindow = ({ user, token }) => {
 };
 
 export default ChatWindow;
-
-const styles = {
-  chatContainer: {
-    width: "100%",
-    maxWidth: "600px",
-    margin: "0 auto",
-    border: "1px solid #ccc",
-    borderRadius: "8px",
-    display: "flex",
-    flexDirection: "column",
-    height: "80vh",
-  },
-  chatBox: {
-    flex: 1,
-    padding: "10px",
-    overflowY: "auto",
-    display: "flex",
-    flexDirection: "column",
-  },
-  message: {
-    margin: "4px 0",
-    padding: "8px 12px",
-    borderRadius: "20px",
-    maxWidth: "70%",
-  },
-  inputForm: {
-    display: "flex",
-    padding: "10px",
-    borderTop: "1px solid #ccc",
-  },
-  input: {
-    flex: 1,
-    padding: "8px",
-    borderRadius: "4px",
-    border: "1px solid #ccc",
-  },
-  button: {
-    marginLeft: "10px",
-    padding: "8px 12px",
-    backgroundColor: "#007bff",
-    color: "#fff",
-    border: "none",
-    borderRadius: "4px",
-  },
-};

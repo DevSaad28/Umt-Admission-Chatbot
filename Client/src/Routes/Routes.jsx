@@ -5,6 +5,7 @@ import UserLayout from "../Layout/User/User.Layout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { PrivateRoute, PublicRoute } from "./ProtectedRoutes";
 import LiveChat from "../Pages/User/LiveChatbot.Page";
+import ChatDashboard from "../Pages/Admin/ChatDashboard";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
        {
         path: "livechat",
         element: <LiveChat />,
+      },
+      {
+        path: "adminchat",
+        element: <ChatDashboard />,
       },
     ],
   },
