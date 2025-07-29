@@ -11,7 +11,6 @@
         "Greetings, how can you help me?"
       ]
     },
-    
     {
       "category": "General",
       "original_question": "Hello",
@@ -727,7 +726,7 @@
         "Are classrooms and libraries accessible to all?"
       ]
     },
-        {
+    {
       "category": "General",
       "original_question": "Assalam-o-Alaikum",
       "answer": "Wa Alaikum salam, main apki madad kaise kar sakta hoon?",
@@ -847,9 +846,116 @@
         "Naukri mela UMT",
         "OCLP ki sahulat"
       ]
+    },
+    {
+      "category": "Academic",
+      "original_question": "How many departments are there at UMT?",
+      "answer": "UMT has over 20 academic departments under various schools and institutes, offering a wide range of undergraduate, graduate, and doctoral programs.",
+      "possible_questions": [
+        "How many academic departments are in UMT?",
+        "List of UMT departments?",
+        "Total number of departments in UMT?",
+        "Which departments are part of UMT?"
+      ]
+    },
+    {
+      "category": "Academic",
+      "original_question": "How many semesters are there in undergraduate, graduate, and doctoral programs?",
+      "answer": "Undergraduate programs typically consist of 8 semesters, graduate programs span 4 semesters, and doctoral programs vary from 6 to 10 semesters depending on research progress.",
+      "possible_questions": [
+        "How many semesters does an undergraduate program have?",
+        "Duration of graduate programs in terms of semesters?",
+        "Doctoral program semester count?",
+        "Number of semesters in each academic level at UMT?"
+      ]
+    },
+    {
+      "category": "Admissions",
+      "original_question": "Is this program offered at UMT?",
+      "answer": "To check if a specific program is offered at UMT, please visit: https://admissions.umt.edu.pk/Programs.aspx",
+      "possible_questions": [
+        "Does UMT offer this program?",
+        "Is this degree available at UMT?",
+        "Can I study this program at UMT?",
+        "Program availability at UMT?"
+      ]
+    },
+    {
+      "category": "Admissions",
+      "original_question": "What is the last date to apply for admission?",
+      "answer": "The last date for admission changes every semester. Please visit https://admissions.umt.edu.pk/ or contact UMT Admissions Office for the most updated information.",
+      "possible_questions": [
+        "When is the admission deadline?",
+        "Final date to apply for current semester admission?",
+        "UMT admission cutoff date?",
+        "Application closing date for UMT?"
+      ]
+    },
+    {
+      "category": "Academic Discipline",
+      "original_question": "What is the expulsion rule at UMT?",
+      "answer": "A student may be expelled due to academic dishonesty, repeated misconduct, or poor academic performance (e.g., failing to maintain the minimum CGPA).",
+      "possible_questions": [
+        "Reasons for expulsion from UMT?",
+        "What causes a student to be expelled at UMT?",
+        "UMT rules on expulsion?",
+        "Can I get expelled for low grades at UMT?"
+      ]
+    },
+    {
+      "category": "Academic",
+      "original_question": "What is the procedure to transfer from one degree to another?",
+      "answer": "Students must apply through the Student Portal for a program change. The transfer depends on eligibility criteria, seat availability, and approval from the academic department. A fee is also applicable.",
+      "possible_questions": [
+        "How to switch programs at UMT?",
+        "Transfer process between degrees at UMT?",
+        "Can I shift to another department or degree?",
+        "Procedure for changing my program at UMT?"
+      ]
+    },
+    {
+      "category": "Admissions",
+      "original_question": "Does UMT offer intermediate level programs?",
+      "answer": "No, UMT does not offer intermediate (FA/FSc/ICS) programs. It only offers undergraduate and higher-level programs.",
+      "possible_questions": [
+        "Can I apply to UMT after Matric?",
+        "Does UMT have FA or FSc programs?",
+        "Is intermediate available at UMT?",
+        "Does UMT offer pre-university programs?"
+      ]
+    },
+    {
+      "category": "Fee & Scholarships",
+      "original_question": "When is the last date to apply for fee installments?",
+      "answer": "The last date to apply for fee installments varies each semester. Please contact the Finance Department or check the Student Portal for deadlines.",
+      "possible_questions": [
+        "Installment application deadline?",
+        "Last day to request fee extension?",
+        "Fee installment application cut-off?",
+        "Where to check fee installment dates?"
+      ]
+    },
+    {
+      "category": "Academic",
+      "original_question": "Can I enroll in regular courses during the summer semester?",
+      "answer": "Yes, UMT allows students to take regular and repeat courses during the summer session if offered by their department.",
+      "possible_questions": [
+        "Can I register for regular subjects in summer?",
+        "Are summer semester courses regular or special?",
+        "Can I complete courses in summer term at UMT?",
+        "Availability of regular courses during summer?"
+      ]
+    },
+    {
+      "category": "Academic",
+      "original_question": "How many total degrees and programs does UMT offer?",
+      "answer": "UMT offers more than 150 academic programs at undergraduate, graduate, and doctoral levels across various disciplines.",
+      "possible_questions": [
+        "How many academic programs are available at UMT?",
+        "Total number of degrees offered at UMT?",
+        "List of degrees available at UMT?",
+        "UMT program and degree offerings?"
+      ]
     }
-  
   ]
 }
-
-
